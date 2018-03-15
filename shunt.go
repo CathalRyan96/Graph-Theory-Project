@@ -11,13 +11,37 @@ func intopost(infix string) string {
 	s := []rune{}
 
 	//For loop to loop over input
-	for _, r := range infix{
-		
-	}
+	for _, r := range infix {
+		switch {
+		case r == '(':
+			s = append(s, r)
+
+		case r == ')':
+			for s[len(s)-1] != '(' {
+				pofix = append(pofix, s[len(s)-1])
+				s = s[:len(s)-1]
+			}
+			s = s[:len(s)-1]
+
+		case specials[r] > 0:
+			for len(s) > 0 && specials[r] <= specials[s[len(s)-1]] {
+				pofix = append(pofix, s[len(s)-1])
+				s = s[:len(s)-1]
+			}
+			s = append(s, r)
+		default:
+			pofix = append(pofix, r)
+
+		}
 
 	}
 
+	for len(s) > 0 {
+		pofix = append(pofix, s[len(s)-1])
+		s = s[:len(s)-1]
+	}
 	return string(pofix)
+
 }
 
 func main() {
