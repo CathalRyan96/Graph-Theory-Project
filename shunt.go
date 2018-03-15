@@ -10,6 +10,13 @@ func intopost(infix string) string {
 	pofix := []rune{}
 	s := []rune{}
 
+	//For loop to loop over input
+	for _, r := range infix{
+		
+	}
+
+	}
+
 	return string(pofix)
 }
 
