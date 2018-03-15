@@ -2,10 +2,15 @@ package main
 
 import "fmt"
 
+//Function that converts infixed regular expressions to
+//post fix regular expressions
 func intopost(infix string) string {
-	postfix := ""
+	specials := map[rune]int{'*': 10, '.': 9, '|': 8}
 
-	return postfix
+	pofix := []rune{}
+	s := []rune{}
+
+	return string(pofix)
 }
 
 func main() {
