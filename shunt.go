@@ -7,8 +7,7 @@ import "fmt"
 func intopost(infix string) string {
 	specials := map[rune]int{'*': 10, '.': 9, '|': 8}
 
-	pofix := []rune{}
-	s := []rune{}
+	pofix, s := []rune{}, []rune{}
 
 	//For loop to loop over input
 	for _, r := range infix {
@@ -18,15 +17,15 @@ func intopost(infix string) string {
 
 		case r == ')':
 			for s[len(s)-1] != '(' {
-				pofix = append(pofix, s[len(s)-1])
-				s = s[:len(s)-1]
+				pofix, s = append(pofix, s[len(s)-1]), s[:len(s)-1]
+
 			}
 			s = s[:len(s)-1]
 
 		case specials[r] > 0:
 			for len(s) > 0 && specials[r] <= specials[s[len(s)-1]] {
-				pofix = append(pofix, s[len(s)-1])
-				s = s[:len(s)-1]
+				pofix, s = append(pofix, s[len(s)-1]), s[:len(s)-1]
+
 			}
 			s = append(s, r)
 		default:
@@ -37,8 +36,7 @@ func intopost(infix string) string {
 	}
 
 	for len(s) > 0 {
-		pofix = append(pofix, s[len(s)-1])
-		s = s[:len(s)-1]
+		pofix, s = append(pofix, s[len(s)-1]), s[:len(s)-1]
 	}
 	return string(pofix)
 
@@ -50,8 +48,8 @@ func main() {
 	fmt.Println("Postfix:	", intopost("a.b.c*"))
 
 	//Answer: abd|.*
-	fmt.Println("Infix:	  ", "a.(b|d))*")
-	fmt.Println("Postfix:	", intopost("a.(b|d))*"))
+	fmt.Println("Infix:	  ", "(a.(b|d))*")
+	fmt.Println("Postfix:	", intopost("(a.(b|d))*"))
 
 	//Answer: abd|.c*
 	fmt.Println("Infix:	  ", "a.(b|d).c*")
