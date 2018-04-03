@@ -82,6 +82,10 @@ func poregtonfa(pofix string) *nfa {
 
 func pomatch(po string, s string) bool {
 	ismatch := false
+	ponfa := poregtonfa(po)
+
+	current := []*state{}
+	next := []*state{}
 
 	return ismatch
 }
