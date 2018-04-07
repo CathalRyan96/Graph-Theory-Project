@@ -181,6 +181,10 @@ func main() {
 	fmt.Println("Infix:	  ", "a.(b.b)+.c")
 	fmt.Println("Postfix:	", intopost("a.(b.b)+.c"))
 
+	//Displays matching algorithm as it returns true
 	fmt.Println(pomatch("ab.c*|", "cccc"))
+
+	//Displays matching algorithm as it returns true
+	fmt.Println(pomatch("ab.c*|", "aaaa"))
 
 }
