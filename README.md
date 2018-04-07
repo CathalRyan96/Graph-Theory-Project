@@ -19,6 +19,7 @@ your submission.
 
 <h3>Structure of Project</h3>
 I divived the project up to 4 different classes:
+
 - Shunt.go
 - nfa.go
 - rega.go
