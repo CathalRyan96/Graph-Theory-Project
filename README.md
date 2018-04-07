@@ -28,7 +28,7 @@ I divived the project up to 4 different classes:
 ## Shunt Algorithm
 In this class I displayed that the shunting yard algorithm is a method for parsing mathematical expressions specified in infix notation.
 
-## Thompsons Algorithmh5
+## Thompsons Algorithm
 In the nfa.go class I displayed the thomspsons construction alogorithm, which is a algorithm for transforming a regular expression into an equivalent nondeterministic finite automaton.
 
 ## Matching Function
@@ -37,3 +37,11 @@ In the rega.go class I display how to use a match function on a string and a pos
 ## Runner Class
 The runner class shows examples of both the shunting yard algorithm and regex match function.
 
+## Adapted from:
+https://web.microsoftstream.com/video/9d83a3f3-bc4f-4bda-95cc-b21c8e67675e
+
+https://web.microsoftstream.com/video/68a288f5-4688-4b3a-980e-1fcd5dd2a53b
+
+https://web.microsoftstream.com/video/bad665ee-3417-4350-9d31-6db35cf5f80d
+
+https://swtch.com/~rsc/regexp/regexp1.html
