@@ -25,7 +25,7 @@ I divived the project up to 4 different classes:
 - rega.go
 - runner.go
 
-<h4>Shunt Algorithm</h4>
+# Shunt Algorithm
 In this class I displayed that the shunting yard algorithm is a method for parsing mathematical expressions specified in infix notation.
 
 <h5>Thompsons Algorithm<h5>
