@@ -16,3 +16,11 @@ of which may have a special meaning. For example, the three characters
 star” respectively. So, 0.1 means a 0 followed by a 1, 0|1 means a 0 or a 1,
 and 1∗ means any number of 1’s. These special characters must be used in
 your submission.
+
+<h3>Structure of Project</h3>
+I divived the project up to 4 different classes:
+- Shunt.go
+- nfa.go
+- rega.go
+- runner.go
+

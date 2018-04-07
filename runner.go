@@ -184,7 +184,7 @@ func main() {
 	//Displays matching algorithm as it returns true
 	fmt.Println(pomatch("ab.c*|", "cccc"))
 
-	//Displays matching algorithm as it returns true
+	//Displays matching algorithm as it returns false
 	fmt.Println(pomatch("ab.c*|", "aaaa"))
 
 }
